@@ -267,6 +267,8 @@ class FirestoreGateway {
       } else {
         listenRequestStream.documentMap
             .remove(response.documentDelete.document);
+        listenRequestStream.documentMap
+            .remove(response.documentRemove.document);
       }
       return listenRequestStream.documentMap.values.toList();
     });
